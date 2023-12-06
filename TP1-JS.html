@@ -1,0 +1,58 @@
+<html>
+<head> 	<title>TP 1 de JavaScript</title>
+		<meta charset="UTF-8">
+		<script src="tp1.js" language="JavaScript">
+		</script>
+</head>
+<body> 
+<h2> Exercice 1</h2>
+	<form name="ex1">
+	<input type="number" name="valeur1" id="valeur1" size="10" value="" />
+	<input type="button" value="Calculer le carré fonction sans paramètre" onClick="calcul_carre();" />
+    <button onClick="calcul_carre_p(document.getElementById('valeur1').value);">Calculer le carré fonction avec paramètre</button>
+	<br />
+	<a href="#" onClick="window.print();"> imprimez la page </a>
+	</form>
+	
+<h2> Exercice 2</h2>
+	<form name="ex2">
+	<input type="number" id="valeur2" name="valeur2" size="10" value="">
+	<input type="button" value="Table multiplication" onClick="multiplication(document.getElementById('valeur2').value);">
+	<button type="button"  onClick="multiplication1(document.getElementById('valeur2').value);">Calcul la table de multiplication</button>
+	<br><table border='1' id="resultat2"></table>
+	</form>
+
+<h2> Exercice 3</h2>
+	<script>
+	var N = prompt('Entrez une valeur',"");
+	table_multiplication_prompt(N);
+	</script>
+	<br />
+	
+<h2> Exercice 4</h2>	
+	<script>
+	table_multi();	
+	table_multiplication_prompt_multi();
+	</script>
+	<br />
+	
+<h2> Exercice 5</h2>	
+	<form name="ex5">
+	<input type="text" name="valeur5" id="valeur5" size="10" value="">
+	<input type="button" value="Table multiplication" onClick="table_multiplication_textarea(ex5.valeur5.value);">
+	<br /><textarea cols="30" rows="14" name="resultat" id="resultat" ></textarea>
+	</form>
+	
+<h2> Exercice 6</h2>
+	<form name="ex6">
+	<input type="text" name="valeur6" id="valeur6" size="90" value=""><br />
+	<input type="button" value="URL" onClick="document.getElementById('valeur6').value = document.location.href;">
+	<input type="button" value="Nom navigateur" onClick="ex6.valeur6.value = navigator.appName;">
+	<input type="button" value="Version navigateur" onClick="ex6.valeur6.value = navigator.appVersion;">
+	<input type="button" value="Code navigateur" onClick="ex6.valeur6.value = navigator.appCodeName;">
+	<input type="button" value="User navigateur" onClick="ex6.valeur6.value = navigator.userAgent;">
+	<input type="button" value="Platform navigateur" onClick="ex6.valeur6.value = navigator.platform;">
+	</form>
+	
+</body>
+</html>
