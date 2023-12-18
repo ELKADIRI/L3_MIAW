@@ -1,0 +1,145 @@
+<html>
+<head> 	<title>TD03 JavaScript</title>
+		
+		<script src="td3.js" language="JavaScript">
+		</script>
+</head>
+<body onLoad="trotteuse();">
+<h1><center>Programmation Web <br>TD03 : JavaScript</center></h1>
+
+<h2> Exercice 1</h2>
+<form name="ex1">
+	<table>
+	<tr>
+		<td>Quantité </td>
+		<td><input type="number" id="quantite" name="quantite" size="20" value=""></td>
+	</tr>
+	<tr>
+		<td>Prix unitaire </td>
+		<td><input type="decimal" id="prix_unitaire" name="prix_unitaire" size="20" value=""></td>
+	</tr>
+	<tr colspan="2" align="center">
+		 <td><input type="button" value="Calculer.." onClick="panier();"></td>
+	</tr>
+	<tr>
+		<td>Prix hors TVA </td>
+		<td><input type="decimal" id="prix_horsTVA" name="prix_horsTVA" size="20" value=""></td>
+	</tr>
+	<tr>
+		<td>Prix TVA incluse </td>
+		<td><input type="decimal" id="prix_avecTVA" name="prix_avecTVA" size="20" value=""><td>
+	</tr>	
+	</table>	
+</form>
+	
+<h2> Exercice 2</h2>
+	<form name="ex2">
+	<h3>Entrer un montant à convertir</h3>
+		<input type="decimal" id="franc" name="franc" size="20" value=""> FF
+		<input type="button" value="<<.." onClick="conversion_Euro_Fr();">
+		<input type="button" value="..>>" onClick="conversion_Fr_Euro();">
+		<input type="decimal" id="euro" name="euro" size="20" value=""> €
+	</form>
+
+<h2> Exercice 3</h2>
+<form name="ex3">
+Un angle droit a :
+<br />
+<!-- Attention le id="radio1" est unique dans la page, mais le name ="radio1" pourra existé 2 fois 
+car c'est un choix unique pour avoir une seule réponse à la même question --> 
+		<input type="radio" id="radio1" name="radio1" value="0" ><label for="radio1">45°</label><br />
+		<input type="radio" id="radio2" name="radio1" value="1" ><label for="radio2">90°</label>
+		<br />
+Un triangle isocèle a :
+<br />
+		<input type="radio" id="radio3" name="radio2" value="1" ><label for="radio3">2 côtés égaux</label><br />
+		<input type="radio" id="radio4" name="radio2" value="0" ><label for="radio4">3 côtés égaux</label>
+		<br />
+Un triangle équilatéral a :
+<br />
+		<input type="radio" id="radio5" name="radio3" value="0" ><label for="radio5">2 côtés égaux</label><br />
+		<input type="radio" id="radio6" name="radio3" value="1" ><label for="radio6">3 côtés égaux</label>
+		<br />
+		<br />
+		<input type="button" id="bouton1" name="bouton1" value="Vérifier" onClick="reponse()">
+		<input type="button" id="bouton2" name="bouton2" value="Recommencer" onClick="ex3.reset();">
+		<br />
+		<br />
+		Résultat <input type="text" id="resultat" name="resultat" size="5" value=""> bonnes réponses 				
+		
+</form>
+	
+<h2> Exercice 4</h2>	
+<form name="ex4">
+	 Temps restant <input type="text" id="temps" name="temps" size="12"> <br />
+	 Un angle droit a :<br />
+	 <input type="radio" id="radio7" name="radio7" value="0" onclick="evaluer()";><label for="radio7">45°</label><br />
+	 <input type="radio" id="radio8" name="radio7" value="1" onclick="evaluer()";><label for="radio8" >90°</label><br />
+	 <input type="radio" id="radio9" name="radio7" value="0" onclick="evaluer()";><label for="radio9" >180°</label><br />	
+</form>
+	
+	
+<h2> Exercice 5</h2>	
+<form name="ex5">
+<table>
+	<tr><td>
+		Votre login :
+		</td>
+		<td>
+		<input type="text" id="login" name="login" size="30" value="">
+		<a href="javascript:popup('Encodez votre login dans la zone de texte');"> Aide</a>
+		</td>
+	</tr>
+	<tr><td>
+		Votre mot de passe : 
+		</td>
+		<td><input type="text" id="mdp" name="mdp" size="30" value=""> 
+		<a href="javascript:popup('Encodez votre mot de passe personnel');"> Aide</a>
+		</td>
+	</tr>
+	</table>	
+</form>
+	
+	
+<h2> Exercice 6</h2>
+	
+<form name="ex6">
+Choisir 3 parfums :
+<br />
+		<input type="checkbox" id="check1" name="check" value="Vanille" ><label for="check1">Vanille</label><br />
+		<input type="checkbox" id="check2" name="check" value="Fraise" ><label for="check2">Fraise</label><br />
+		<input type="checkbox" id="check3" name="check" value="Cassis" ><label for="check3">Cassis</label><br />
+		<input type="checkbox" id="check4" name="check" value="Framboise" ><label for="check4">Framboise</label><br />
+		<input type="checkbox" id="check5" name="check" value="Melon" ><label for="check5">Melon</label><br />
+		<input type="checkbox" id="check6" name="check" value="Citron" ><label for="check6">Citron</label><br />
+		<input type="checkbox" id="check7" name="check" value="Chocolat" ><label for="check7">Chocolat</label><br />
+		<input type="checkbox" id="check8" name="check" value="Café" ><label for="check8">Café</label><br />
+		<input type="checkbox" id="check9" name="check" value="Moka" ><label for="check9">Moka</label><br /><br />
+		
+		<input type="button" id="bouton3" name="bouton3" value="Envoyer" onClick="controle_reponse();">
+</form>
+
+<h2> Exercice 7</h2>
+	
+<form name="ex7">
+<textarea rows="5" cols="40" id="texta7" name="texta7" maxlength="150" onkeyup="calcul();"></textarea> <br />
+Il vous reste <input type="text" disabled="disabled" size="3" id="text7" name="text7" value="150"> caractères
+</form>
+
+<br /><br />
+<h2> Exercice 8</h2>
+	
+<form name="ex8">
+<textarea rows="3" cols="40" id="texta8" name="texta8"></textarea> <br />
+<input type="button" id="bouton8" name="bouton8" value="Sélectionner tout" onClick="selection();">
+</form>
+
+<h2> Exercice 9</h2>
+	
+<form name="ex9">
+Passez la souris <a href="#" onMouseover="over();" onMouseout="out();">ICI </a><br />
+<textarea rows="3" cols="40" id="texta9" name="texta9"></textarea> <br />
+</form>
+
+</body>
+</html>
