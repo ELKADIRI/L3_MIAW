@@ -1,0 +1,107 @@
+<HTML>
+<head> 	<title>TP 3 de JavaScript</title>
+		<meta charset="UTF-8">
+		<script src="tp3.js" language="JavaScript">
+		</script>
+</head>
+<BODY> 
+<h2> Exercice 1</h2>
+	<form name="ex1">
+		Quantité<input type="number" id="quantite" name="quantite" size="20" value="">
+		<br />
+		Prix unitaire<input type="decimal" id="prix_unitaire" name="prix_unitaire" size="20" value="">
+		<br />
+		<input type="button" value="Calculer.." onClick="panier();">
+		<br />
+		Prix hors TVA<input type="decimal" id="prix_horsTVA" name="prix_horsTVA" size="20" value="">
+		<br />
+		Prix TVA incluse<input type="decimal" id="prix_avecTVA" name="prix_avecTVA" size="20" value="">
+	</form>
+	
+<h2> Exercice 2</h2>
+	<form name="ex2">
+	<h3>Entrer un montant à convertir</h3>
+		<input type="decimal" id="franc" name="franc" size="20" value=""> FF
+		<input type="button" value="<<.." onClick="conversion_Euro_Fr();">
+		<input type="button" value="..>>" onClick="conversion_Fr_Euro();">
+		<input type="decimal" id="euro" name="euro" size="20" value=""> €
+	</form>
+	<br /><br />
+<h2> Exercice 3</h2>
+	<form name="ex3">
+Un angle droit a :
+<br />
+		<input type="radio" id="radio1" name="radio1" value="0" ><label for="radio1">45°</label><br />
+		<input type="radio" id="radio1" name="radio1" value="1" ><label for="radio1">90°</label>
+		<br />
+Un triangle isocèle a :
+<br />
+		<input type="radio" id="radio2" name="radio2" value="1" ><label for="radio2">2 côtés égaux</label><br />
+		<input type="radio" id="radio2" name="radio2" value="0" ><label for="radio2">3 côtés égaux</label>
+		<br />
+Un triangle équilatéral a :
+<br />
+		<input type="radio" id="radio3" name="radio3" value="0" ><label for="radio3">2 côtés égaux</label><br />
+		<input type="radio" id="radio3" name="radio3" value="1" ><label for="radio3">3 côtés égaux</label>
+		<br />
+		<input type="button" id="bouton1" name="bouton1" value="Vérifier" onClick="reponse();">
+		<input type="button" id="bouton2" name="bouton2" value="Recommencer" onClick="ex3.reset();">
+		<br />
+		Résultat <input type="text" id="resultat" name="resultat" size="5" value=""> bonnes réponses 				
+		
+	</form>
+	
+<h2> Exercice 4</h2>	
+	<form name="ex4">
+		<input type="text" id="date" name="date" size="10" value="">
+		<input type="text" id="heure" name="heure" size="10" value="">
+		<!--<input type="button" value="Date et heure" onClick="quelle_heure();">-->
+	</form>
+	
+	
+<h2> Exercice 5</h2>	
+	<form name="ex5">
+	<input type="radio" id="radio0" name="radio_coche" value="red" onClick="changement_couleurs();">
+	<label for="radio0">Rouge</label>
+	<input type="radio" id="radio1" name="radio_coche" value="green" onClick="changement_couleurs();">
+	<label for="radio1">Vert</label>
+	<input type="radio" id="radio2" name="radio_coche" value="bleue" onClick="changement_couleurs();">
+	<label for="radio2">Bleu</label>
+    <input type="radio" id="radio3" name="radio_coche" value="yellow" onClick="changement_couleurs();">
+	<label for="radio3">Jaune</label>
+	<input type="text" name="valeur5" id="valeur5" size="50" value="Vous avez choisi ">
+	<br /><br />
+	<select name="liste" id="liste" onChange="changement_couleurs1();">
+	<option value="red">Rouge</option>
+	<option value="green">Vert</option>
+	<option value="bleue">Bleu</option>
+	<option value="yellow">Jaune</option>
+	</select>
+	</form>
+	
+	<br /><br />
+<h2> Exercice 6</h2>
+	
+<form NAME="Coordonnees" method="POST" ACTION="./TP1-JS.html">
+Saisissez une adresse mail valide (nom@domaine) :
+<INPUT TYPE="TEXT" NAME="mail">
+<INPUT TYPE="button" NAME="bouton" VALUE="Valider"  onClick="ValiderMail(this.form)">
+</form>
+<h2> Exercice 7</h2>
+<p>Une fonction est déclenchée lorsque l'utilisateur relâche une touche dans le champ
+ de saisie. La fonction transforme le caractère en majuscule: 
+<form>
+	<input type="text" id="fname" onkeyup="myFunction()">
+</form>
+<script>
+function myFunction() {
+  /*
+  var x = document.getElementById("fname");
+  x.value = x.value.toUpperCase();
+  */
+  document.getElementById("fname").value=document.getElementById("fname").value.toUpperCase();
+}
+</script>
+
+</BODY>
+</HTML>
