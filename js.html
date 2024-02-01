@@ -1,0 +1,79 @@
+<html>
+<head>
+<meta charset="utf-8">
+<title>controle</title>
+<script src="js.js" type="text/javascript">
+</script>
+<style>
+td, th{
+  border:1px solid black;
+  padding: 5px;
+}
+</style>
+</head >
+<body>
+
+<form id="tableau">
+<table style="border: 2px solid black">
+      <tr>
+          <th>Réference</th>
+          <th>Désignation produit</th>
+          <th>Quantité</th>
+          <th>Prix unitaire</th>
+          <th>Prix total</th>
+      </tr>
+      <tr style="background:lightgray">
+      	<td><input type="text" id="ref1" pattern="reference"></input></td>
+        <td><input type="text" id="Désignation1"></input></td>
+        <td><input type="number" id="quantité1"></input></td>
+        <td><input type="decimal" id="Prix1"></input> euros</td>
+        <td><input type="decimal" id="Prixtoto1" disabled></input> euros</td>
+      </tr>
+      <tr style="background:lightblue">
+      	<td><input type="text" id="ref2"></input></td>
+        <td><input type="text" id="Désignation2"></input></td>
+        <td><input type="number" id="quantité2"></input></td>
+        <td><input type="decimal" id="Prix2"></input> euros</td>
+        <td><input type="decimal" id="Prixtoto2" disabled></input> euros</td>
+      </tr>
+      <tr style="background:lightgray">
+      	<td><input type="text" id="ref3"></input></td>
+        <td><input type="text" id="Désignation3"></input></td>
+        <td><input type="number" id="quantité3"></input></td>
+        <td><input type="decimal" id="Prix3"></input> euros</td>
+        <td><input type="decimal" id="Prixtoto3" disabled></input> euros</td>
+      </tr>
+       <tr style="background:gray; color:white;">
+      	<td colspan="4">Total :</td>
+        <td><input type="text" id="Total" disabled></input> euros</td>
+      </tr>
+       <tr style="background:gray; color:white;">
+      	<td colspan="4">Frais de port :</td>
+        <td><input type="text" id="Fp" disabled></input> euros</td>
+      </tr>
+      <tr style="background:gray; color:white;">
+      	<td colspan="4">Dont TVA :</td>
+        <td><input type="text" id="TVA" disabled></input> euros</td>
+      </tr>
+      <tr style="background:gray; color:white;">
+      	<td colspan="4">Prix HT :</td>
+        <td><input type="text" id="PHT" disabled></input> euros</td>
+      </tr>
+      <tr style="background:gray; color:white;">
+      	<td colspan="4">Total à payer</td>
+        <td><input type="text" id="TAP" disabled></input> euros</td>
+      </tr>   
+</table>
+<br />
+
+<input type="button" value="Calculer" onclick="calcul();"></input>
+<input type="button" value="Réinitialiser" onclick="effacer();"></input>
+<input type="button" value="Imprimer" onclick="imprimer();"></input>
+<input type="button" value="Fermer la fenêtre" onclick="fermer();"></input>
+
+</form>
+
+</body>
+
+
+</HTML>
