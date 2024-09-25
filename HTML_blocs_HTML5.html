@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<title>D&eacute;monstration des &eacute;l&eacute;ments de section HTML5</title>
+		<!-- Styles spécifiques à cette démonstration -->
+	<style>
+		body {
+			font: normal 90% "Trebuchet MS",Verdana,"Lucida Grande",Tahoma,Arial,Helvetica,Sans-Serif;
+			color: #444;
+			background:#f4f4f4;
+			padding:0 0 2em 0;
+			margin:0;
+		}
+
+		#wrap {
+			padding: 0 3em 3em 3em;
+			margin:auto;
+		}
+
+		h1 {
+			color: #99b92c;
+			font-size: 4em;
+			font-weight: normal;
+			text-shadow: 1px 1px 1px #cccccc;
+			background:white;
+			border-bottom:2px dotted #ccc;
+			margin:0;
+			padding:0.8em;
+		}
+
+		h2 {
+			font-size: 2em;
+			font-weight:bold;
+			margin: 1.5em 0 .8em 0;
+			color: #444;
+			text-shadow: 1px 1px 1px #cccccc;
+		}
+
+		ul {
+			margin:0;
+			padding:0;
+		}
+
+		li {
+			background: url(/css/img/ico-puce.png) no-repeat scroll left 7px transparent;
+			list-style-type:none;
+			padding-left: 10px;
+		}
+
+		.mentions {
+			background:#505050 url(/css/img/footer-logo.png) no-repeat 99% 50%;
+			padding:1.3em;
+			color:#fff;
+			-webkit-box-shadow: 1px 1px 1px 1px rgba(50, 50, 50, 0.1);
+			-moz-box-shadow: 1px 1px 1px 1px rgba(50, 50, 50, 0.1);
+			box-shadow: 1px 1px 1px 1px rgba(50, 50, 50, 0.1);
+			border:1px solid #ddd;
+			margin:8em 3em 1em 3em;
+			padding-right: 170px;
+		}
+
+		.mentions a {
+			font-weight:bold;
+			color:#fff;
+		}
+
+		.hint {
+			background:#ddd;
+			padding:3px;
+			border:1px dashed white;
+		}
+
+		.warning {
+			color:#c00;
+		}
+
+		input[type="number"] {
+				line-height:1.5;
+				width:50px;
+				border-radius:5px;
+				border: 1px solid #dadada;
+			}
+		table {
+			width: auto;
+			margin: 1em 0;
+		}
+
+		th {
+			color:#555;
+			background: #DDD;
+			-moz-border-radius-topleft: 7px;
+			-moz-border-radius-topright: 7px;
+			-webkit-border-top-right-radius: 7px;
+			-webkit-border-top-left-radius: 7px;
+			border-top-right-radius: 7px;
+			border-top-left-radius: 7px;
+		}
+
+		th, td {
+		text-align: left;
+		padding: 5px 8px;
+		}
+
+		fieldset {
+			border:0;
+			padding:0;
+		}
+		legend {
+			padding-bottom: 1em;
+		}
+
+		@media (max-width: 640px) {
+			h1 {font-size:2.5em;}
+			img {
+			height: auto; width: auto;
+		   -webkit-box-sizing: border-box;
+		   -moz-box-sizing: border-box;
+			}
+			 body, details, .mentions {
+			   width: auto;
+			   margin: auto;
+			   padding: auto;
+			 }
+			img, table, td, blockquote, code, pre, textarea, input, iframe, object, embed, video {
+			   max-width: 100%;
+			 }
+			img {
+			   height: auto; width: auto;
+			   -webkit-box-sizing: border-box;
+			   -moz-box-sizing: border-box;
+			 }
+			textarea, table, td, th, code, pre, samp {
+			   word-wrap: break-word;
+			   -webkit-hyphens: auto;
+			   -moz-hyphens: auto;
+			   hyphens: auto;
+			}
+			code, pre, samp {
+			   white-space: pre-wrap;
+			}
+
+			p + details, form, h3 {margin-left:0 !important;}
+			img {
+			   float: none !important;
+			   width: auto !important;
+			}
+			.mentions {
+				background-image:none;
+			}
+			.hide_mobile {
+			   display: none !important;
+			}
+		}
+		@media (max-width:640px) and (orientation: landscape) {
+		  body {
+		   -webkit-text-size-adjust: 70%;
+		  }
+		}
+		#wrapper {
+			width:980px;
+			margin: 0 auto 0 auto;
+		}
+
+		#main {
+			float:left;
+			width:75%;
+			margin: 0 0 50px 0;
+		}
+
+		#sidebar {
+			float:left;
+			width:22%;
+			margin-left:1%;
+			margin-top:1em;
+		}
+
+		footer {
+			clear:both;
+		}
+
+		#wrapper>nav {
+			padding:1em;
+			border:1px dashed #444;
+			margin-top:1em;
+		}
+
+		.nav ul li {
+			display:inline-block;
+		}
+
+
+		article {
+			border:1px dashed #444;
+			margin:1em;
+			padding:1em;
+			background:#fff;
+		}
+
+		article h2 {
+			margin-top: 1em;
+		}
+
+		article header, article footer {
+			border:1px dashed #ccc;
+			padding:1em;
+			background:#ddd;
+		}
+
+		aside {
+			border:1px dashed #444;
+		}
+
+		article aside {
+			background:#fff;
+			margin:1em 3em;
+			padding:0.5em;
+			border:1px dashed #ccc;
+		}
+
+		/* Marquage sp�cifique */
+
+		article, footer, header, aside, nav {
+			position:relative;
+		}
+
+		span.elem {
+			background:#c00;
+			color:white;
+			position:absolute;
+			top:0;
+			left:0;
+			margin:0;
+			padding:0.5em;
+			z-index:100;
+			opacity:0.5;
+		}
+
+</style>
+</head>
+<body>
+<!-- Header -->
+	<header>
+		<span class="elem">header</span>
+		<h1>Nouveaux &eacute;l&eacute;ments de section, article, header, footer, aside, nav</h1>
+	</header>
+
+	<div id="wrapper">
+
+		<!-- nav principale -->
+		<nav class="nav">
+			<span class="elem">nav</span>
+			<ul>
+				<li><a href="#">Rubrique 1</a></li>
+				<li><a href="#">Rubrique 2</a></li>
+				<li><a href="#">Rubrique 3</a></li>
+				<li><a href="#">Rubrique 4</a></li>
+			</ul>
+		</nav>
+
+		<!-- Main -->
+		<section id="main">
+
+			<article>
+				<span class="elem">article</span>
+				<header>
+					<span class="elem">header</span>
+					<h2>En tete de l'article</h2>
+					<p>Date de publication, auteur</p>
+				</header>
+
+				<p>Contenu de l'article, contenu de l'article, contenu de l'article, contenu de l'article, contenu de l'article, contenu de l'article, contenu de l'article...</p>
+
+				<aside>
+					<span class="elem">aside</span>
+					<p>Contenu tangentiel</p>
+				</aside>
+
+				<footer>
+					<span class="elem">footer</span>
+					<p>Pied d'article</p>
+				</footer>
+			</article>
+
+			<article>
+				<span class="elem">article</span>
+				<header>
+					<span class="elem">header</span>
+					<h2>La production de kiwis dans le monde</h2>
+					<p>Par Georges, le <time datetime="2012-02-02">2 f&eacute;vrier 2012</time></p>
+				</header>
+
+				<p>L'Italie est le premier producteur mondial en 2009, d'ou ses recherches dans le d&eacute;veloppement de nouveaux cultivars comme &agrave; l'Universiteacute; d'Udine. La France (5e mondial et troisieme europ&eacute;en) produisait un peu moins de 76 000 tonnes en 2004, son premier client est l'Espagne. Il est cultiv&eacute; dans l'Ariege, en Tarn-et-Garonne et sur la facade atlantique, du Pays basque &agrave; la Bretagne.</p>
+
+				<aside>
+					<span class="elem">aside</span>
+					<p>Les <b>kiwis</b> sont des fruits de plusieurs esp&egrave;ces de lianes du genre Actinidia, famille des Actinidiaceae. Ils sont originaires de Chine, notamment de la province de Shaanxi.</p>
+				</aside>
+
+				<footer>
+					<span class="elem">footer</span>
+					<p>Source : <a href="http://fr.wikipedia.org/wiki/Kiwi">Wikipedia</a></p>
+				</footer>
+			</article>
+
+		</section>
+
+		<!-- sidebar -->
+		<aside id="sidebar">
+			<span class="elem">aside</span>
+
+			<h2>Sidebar</h2>
+
+			<h3>Navigation</h3>
+			<nav>
+				<span class="elem">nav</span>
+				<ul>
+					<li><a href="#">Lien 1</a></li>
+					<li><a href="#">Lien 2</a></li>
+					<li><a href="#">Lien 3</a></li>
+				</ul>
+			</nav>
+
+			<h3>Autre titre</h3>
+			<p>Autres informations...</p>
+
+		</aside>
+	</div>
+
+<!-- footer -->
+	<footer>
+		<span class="elem">footer</span>
+		<p class="mentions">Page de d&eacute;monstration de l'article <a href="#">Nouveaux &eacute;l&eacute;ments de section, article, header, footer, aside, nav</a></p>
+	</footer>
+
+</body>
+</html>
