@@ -1,0 +1,80 @@
+<html>
+<head> 	<title>TD3 de JavaScript</title>
+		<meta charset="UTF-8">
+		<script src="./JS/td3.js">
+		</script>
+</head>
+<body onLoad="quelle_heure();"> 
+<!-- <body>-->
+<h2> Exercice 1</h2>
+	<form name="ex1">
+		<input type="button" value="Calculer le carré fonction sans paramètre" onClick="OuvrirFenetre('https://www.google.com');">
+		<br />
+		<a href="#" onClick="OuvrirFenetre('./TD_05-JS.htmL');"> Ouvrir la page </a>
+	</form>
+	
+<h2> Exercice 2</h2>
+	<form name="formulaire">
+	<h3>Entrer une expression mathématique</h3>
+		<input type="text" id="saisie" name="saisie" size="20" value="">
+		<input type="button" value="Evaluation.." onClick="conversion();">
+		<br />
+		<input type="text" id="converti" name="converti" size="20" value="">
+	</form>
+
+<h2> Exercice 3</h2>
+	<form name="ex3">
+		
+		<input type="checkbox" id="check" name="check" onClick="reglement();"> 
+		<label for="check">J'accepte le reglement</label>
+		<br /><br />
+		<input type="button" id="bouton" name="bouton" value="S'enregistrer" disabled="disabled">
+	</form>
+	
+<h2> Exercice 4</h2>	
+	<form name="ex4">
+		<input type="text" id="date" name="date" size="10" value="">
+		<input type="text" id="heure" name="heure" size="10" value="">
+		<input type="button" value="Date et heure" onClick="quelle_heure();" disabled>
+	</form>
+	
+	
+<h2> Exercice 5</h2>	
+	<form name="ex5" style="background:lightgreen">
+	<input type="radio" id="radio0" name="radio_coche" value="red" onClick="changement_couleurs();">
+	<label for="radio0">Rouge</label>
+	<input type="radio" id="radio1" name="radio_coche" value="green" onClick="changement_couleurs();">
+	<label for="radio1">Vert</label>
+	<input type="radio" id="radio2" name="radio_coche" value="blue" onClick="changement_couleurs();">
+	<label for="radio2">Bleu</label>
+    <input type="radio" id="radio3" name="radio_coche" value="yellow" onClick="changement_couleurs();">
+	<label for="radio3">Jaune</label>
+	<input type="text" name="valeur5" id="valeur5" size="50" value="Vous avez choisi " checked="checked">
+	<br /><br />
+	<select name="liste" id="liste" onChange="changement_couleurs1();">
+	<option value="red">Rouge</option>
+	<option value="green">Vert</option>
+	<option value="blue">Bleu</option>
+	<option value="yellow">Jaune</option>
+	</select>
+	</form>
+	
+	<br /><br />
+<h2> Exercice 6</h2>
+	
+<form method="POST" ACTION="./TP1-JS.html">
+Saisissez une adresse mail valide (nom@domaine) :
+<input type="email" name="mail1" required>
+<input type="button" name="bouton" value="valider"  onclick="validermail(this.form)">
+</form>
+
+<div>
+<h2>Input un email et Submit</h2>
+<form name="form1" action="#"> 
+	Saisissez une adresse mail valide :
+		<input type='text' name='text1'/>
+		<input type="button" name="submit" value="Envoyer" onclick="ValidateEmail(document.form1.text1)"/></li>
+</form>
+</div>
+</body>
+</html>
