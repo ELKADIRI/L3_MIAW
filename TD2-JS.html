@@ -1,16 +1,16 @@
 <html>
-<head> 	<title>TP 2 de JavaScript</title>
+<head> 	<title>TD3 de JavaScript</title>
 		<meta charset="UTF-8">
-		<script src="td2.js" language="JavaScript">
+		<script src="./JS/td2.js">
 		</script>
 </head>
- <body onLoad="quelle_heure();"> 
-<!--<body>-->
+<body > 
+<!-- <body>-->
 <h2> Exercice 1</h2>
 	<form name="ex1">
 		<input type="button" value="Calculer le carré fonction sans paramètre" onClick="OuvrirFenetre('https://www.google.com');">
 		<br />
-		<a href="#" onClick="OuvrirFenetre('./TP2_CSS_ex2/TP2_CSS_ex2/ex2.htm');"> Ouvrir la page </a>
+		<a href="#" onClick="OuvrirFenetre('./TD_05-JS.html');"> Ouvrir la page </a>
 	</form>
 	
 <h2> Exercice 2</h2>
@@ -33,9 +33,9 @@
 	
 <h2> Exercice 4</h2>	
 	<form name="ex4">
-		<input type="text" id="date" name="date" size="10" value="">
-		<input type="text" id="heure" name="heure" size="10" value="">
-		<input type="button" value="Date et heure" onClick="quelle_heure();" disabled >
+		<input type="number" id="date" name="date" size="10" value="">
+		<input type="number" id="heure" name="heure" size="10" value="">
+		<input type="button" value="Date et heure" onClick="quelle_heure();" >
 	</form>
 	
 	
@@ -64,7 +64,7 @@
 	
 <form method="POST" ACTION="./TP1-JS.html">
 Saisissez une adresse mail valide (nom@domaine) :
-<input type="text" name="mail">
+<input type="email" name="mail1" required>
 <input type="button" name="bouton" value="valider"  onclick="validermail(this.form)">
 </form>
 
@@ -73,7 +73,7 @@ Saisissez une adresse mail valide (nom@domaine) :
 <form name="form1" action="#"> 
 	Saisissez une adresse mail valide :
 		<input type='text' name='text1'/>
-		<input type="button" name="submit" value="Envoyer" onclick="ValidateEmail(document.form1.text1)"/></li>
+		<input type="button" name="button" value="Envoyer" onclick="ValidateEmail(document.form1.text1)"/></li>
 </form>
 </div>
 </body>
