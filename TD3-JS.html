@@ -1,7 +1,7 @@
 <html>
-<head> 	<title>TD03 JavaScript</title>
+<head> 	<title>TD3 JavaScript</title>
 		
-		<script src="td3.js" language="JavaScript">
+		<script src="./JS/td3.js">
 		</script>
 </head>
 <body onLoad="trotteuse();">
@@ -16,18 +16,18 @@
 	</tr>
 	<tr>
 		<td>Prix unitaire </td>
-		<td><input type="decimal" id="prix_unitaire" name="prix_unitaire" size="20" value=""></td>
+		<td><input type="number" id="prix_unitaire" name="prix_unitaire" size="20" value=""></td>
 	</tr>
 	<tr colspan="2" align="center">
 		 <td><input type="button" value="Calculer.." onClick="panier();"></td>
 	</tr>
 	<tr>
 		<td>Prix hors TVA </td>
-		<td><input type="decimal" id="prix_horsTVA" name="prix_horsTVA" size="20" value=""></td>
+		<td><input type="number" id="prix_horsTVA" name="prix_horsTVA" size="20" value=""></td>
 	</tr>
 	<tr>
 		<td>Prix TVA incluse </td>
-		<td><input type="decimal" id="prix_avecTVA" name="prix_avecTVA" size="20" value=""><td>
+		<td><input type="number" id="prix_avecTVA" name="prix_avecTVA" size="20" value=""><td>
 	</tr>	
 	</table>	
 </form>
