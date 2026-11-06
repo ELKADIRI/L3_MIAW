@@ -1,0 +1,5 @@
+AJAX n'est pas un langage de programmation.
+
+AJAX est une technique permettant d'accéder à des serveurs web depuis une page web.
+
+AJAX signifie Asynchronous JavaScript And XML.
